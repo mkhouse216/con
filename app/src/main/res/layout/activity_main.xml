@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main_page">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="#DD2A45CC"
+            android:id="@+id/rr"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                android:layout_height="match_parent"></ImageView>
+
+            <TextView
+                android:id="@+id/title2"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="100dp"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="contact book dixit patel hello"
+                android:textColor="#fff"
+                android:textSize="20dp"></TextView>
+
+
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_margin="5dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/more_vert"
+                android:layout_height="match_parent"></ImageView>
+
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rr"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/aaaa"></androidx.appcompat.widget.SearchView>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mycontactdeta"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/search"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"
+            android:clickable="true"
+            app:srcCompat="@drawable/ic_baseline_add_24" />
+    </RelativeLayout>
+
+</LinearLayout>
